@@ -4,6 +4,11 @@
 <head>
     <link rel="stylesheet" href="comp.css">
     <title>CORINA</title>
+    <script>
+    if (localStorage.getItem("darkMode") === "enabled") {
+        document.documentElement.classList.add("dark-loading");
+    }
+</script>
 </head>
 
 <body>
@@ -21,19 +26,23 @@
             <a href="services.html">SERVICES</a>
             <a href="contacts.html">CONTACTS</a>
         </div>
-
-    </nav>
-
-
+<button id="dark-mode-btn">🌙</button>
+      </nav>
     <header class="accueil">
 
     <div class="presentation">
+        
+        <div class="photo">
 
         <img src="photo.jpeg" alt="Photo de Corina">
+        
+    </div>
 
         <div class="presentation-texte">
 
-            <h1>Bonjour, je suis CORINA</h1>
+            <h1>
+    Bonjour, je suis <span id="texteDynamique"></span>
+</h1>
 
             <h2>Etudiante en Génie informatique</h2>
 
@@ -60,6 +69,7 @@
         </div>
 
     </footer>
+    <script src="script.js"></script>
 
 </body>
 

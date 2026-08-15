@@ -114,6 +114,7 @@ body {
     font-size: 42px;
     color: #344054;
     margin: 0 0 10px;
+    line-height: 1.2;
 }
 
 .presentation-texte h2 {
@@ -377,6 +378,184 @@ footer {
 
     .contact a {
         text-align: center;
+    }
+
+}
+body {
+    background-color: white;
+    color: #222;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+/* =========================
+   MODE SOMBRE
+   ========================= */
+
+body {
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+#dark-mode-btn {
+    border: none;
+    background: transparent;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 15px;
+    transition: transform 0.3s ease;
+}
+
+#dark-mode-btn:hover {
+    transform: rotate(20deg) scale(1.15);
+}
+
+
+/* FOND DU SITE */
+
+body.dark-mode {
+    background-color: #0f172a;
+    color: #f8fafc;
+}
+
+
+/* ACCUEIL */
+
+body.dark-mode .accueil {
+    background-color: #0f172a;
+}
+
+
+/* TITRES */
+
+body.dark-mode .presentation-texte h1,
+body.dark-mode .page h2 {
+    color: #f8fafc;
+}
+
+
+/* SOUS-TITRES */
+
+body.dark-mode .presentation-texte h2 {
+    color: #cbd5e1;
+}
+
+
+/* TEXTES */
+
+body.dark-mode .presentation-texte p,
+body.dark-mode .page p {
+    color: #cbd5e1;
+}
+
+
+/* CARTES COMPÉTENCES */
+
+body.dark-mode .competence {
+    background-color: #1e293b;
+    color: #f8fafc;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+/* SERVICES */
+
+body.dark-mode .page li {
+    background-color: #1e293b;
+    color: #f8fafc;
+}
+
+
+/* BOUTONS */
+
+body.dark-mode .bouton,
+body.dark-mode .contact a {
+    background-color: #6366f1;
+}
+
+
+body.dark-mode .bouton:hover,
+body.dark-mode .contact a:hover {
+    background-color: #818cf8;
+}
+
+
+/* PHOTO */
+
+body.dark-mode .photo img {
+    border-color: #6366f1;
+}
+/* =========================
+   TRANSITION DES PAGES
+   ========================= */
+
+body {
+    animation: apparitionPage 0.5s ease;
+}
+
+@keyframes apparitionPage {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================
+   ÉVITER LE FLASH BLANC
+   ========================= */
+
+html.dark-loading {
+    background-color: #0f172a;
+}
+
+html.dark-loading body {
+    background-color: #0f172a;
+}
+/* =========================
+   TEXTE DYNAMIQUE PREMIUM
+   ========================= */
+
+#texteDynamique {
+    color: #6366f1;
+    font-weight: bold;
+    position: relative;
+    padding-right: 8px;
+}
+
+
+/* CURSEUR */
+
+#texteDynamique::after {
+    content: "";
+    display: inline-block;
+
+    width: 3px;
+    height: 0.9em;
+
+    background-color: #6366f1;
+
+    margin-left: 5px;
+
+    vertical-align: -2px;
+
+    animation: curseur 0.8s infinite;
+}
+
+
+@keyframes curseur {
+
+    0%,
+    45% {
+        opacity: 1;
+    }
+
+    46%,
+    100% {
+        opacity: 0;
     }
 
 }
